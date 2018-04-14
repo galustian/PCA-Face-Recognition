@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Face Recognition</title>
+        
+        <style>
+            html {
+                text-align: center;
+            }
+
+            h1 {
+                font-family: sans-serif;
+                text-align: center;
+                font-weight: 100;
+            }  
+            
+            form {
+                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+                width: 40rem;
+                margin: 0 auto;
+                padding: 4rem;
+            }
+
+            input {
+                margin-bottom: 2rem;
+            }
+
+            h3 {
+                font-family: sans-serif;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        </style>
+
+    </head>
+    
+    <body>
+        <h1>Compare two faces and get a similarity score based on PCA</h1>
+        <p>(lower => more similar; face should be centered for best results)</p>
+
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label for="your_face">Choose image of your face.</label>
+            <input type="file" name="your_face" id="your_face">
+            
+            <br>
+            
+            <label for="your_face">Choose image of other face to compare with.</label>
+            <input type="file" name="other_face" id="other_face">
+            
+            <br>
+
+            <button type="submit">Compare</button>
+        </form>
+
+        {% if score or score==0 %}
+            <h3>Similarity Score: {{ score }}</h3>
+        {% endif %}
+    </body>
+</html>
