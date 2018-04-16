@@ -1,5 +1,6 @@
 # Face Recognition with PCA
 Run the demo and have a look at the pca-face-recognition notebook to see how PCA is used to compare images.
+
 [Dataset: vision.caltech.edu/html-files/archive.html](http://www.vision.caltech.edu/html-files/archive.html)
 
 ### Hot to run the demo:
